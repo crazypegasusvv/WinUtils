@@ -8,11 +8,32 @@ import "oaidl.idl";
 import "ocidl.idl";
 
 [
+	object,
+	uuid(5a7124fc-ca0a-4418-8e0f-b13a7a91c5b4),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICircle : IDispatch
+{
+	[propget, id(1)] HRESULT Radius([out, retval] DOUBLE* pVal);
+	[propput, id(1)] HRESULT Radius([in] DOUBLE newVal);
+	[id(2)] HRESULT GetArea([out] DOUBLE* Area);
+};
+[
 	uuid(1fca7fab-d2a5-4b07-82fc-86a917d90e52),
 	version(1.0),
 ]
 library ShapesLib
 {
 	importlib("stdole2.tlb");
+	[
+		uuid(cb852316-716e-4e03-92bf-e0082be27cec)
+	]
+	coclass Circle
+	{
+		[default] interface ICircle;
+	};
 };
 
+import "shobjidl.idl";
