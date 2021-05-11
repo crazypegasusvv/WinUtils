@@ -6,6 +6,9 @@ Debug/*
 COM/Shapes/Release/*
 COM/Shapes/Debug/*
 COM/Shapes/x64/*
+COM/ShapesClientCPP/Release/*
+COM/ShapesClientCPP/Debug/*
+COM/ShapesClientCPP/x64/*
 
 # Prerequisites
 *.d
