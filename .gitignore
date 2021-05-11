@@ -1,5 +1,15 @@
+# Directories
+.vs*
+x64/*
+Release/*
+Debug/*
+COM/Shapes/Release/*
+COM/Shapes/Debug/*
+COM/Shapes/x64/*
+
 # Prerequisites
 *.d
+*.vcxproj.user
 
 # Compiled Object files
 *.slo
