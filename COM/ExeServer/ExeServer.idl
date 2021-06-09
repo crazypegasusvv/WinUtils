@@ -1,0 +1,38 @@
+// ExeServer.idl : IDL source for ExeServer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ExeServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(b093ad50-0a32-4a7b-9856-03fefd33fe02),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IExeCuber : IDispatch
+{
+
+	[id(1)] HRESULT CubeMe([in] DOUBLE num, [out] DOUBLE *numOut);
+};
+[
+	uuid(25b1e72e-da8e-4c40-a2c0-4b4981275188),
+	version(1.0),
+]
+library ExeServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(ba0f9392-516e-46dc-b8b0-b21a4648ed30)
+	]
+	coclass ExeCuber
+	{
+		[default] interface IExeCuber;
+	};
+};
+
+import "shobjidl.idl";

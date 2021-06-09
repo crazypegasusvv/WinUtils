@@ -1,14 +1,25 @@
 # Directories
 .vs*
+
 x64/*
 Release/*
 Debug/*
+
 COM/Shapes/Release/*
 COM/Shapes/Debug/*
 COM/Shapes/x64/*
+
 COM/ShapesClientCPP/Release/*
 COM/ShapesClientCPP/Debug/*
 COM/ShapesClientCPP/x64/*
+
+COM/ExeClient/Release/*
+COM/ExeClient/Debug/*
+COM/ExeClient/x64/*
+
+COM/ExeServer/Release/*
+COM/ExeServer/Debug/*
+COM/ExeServer/x64/*
 
 # Prerequisites
 *.d
@@ -23,6 +34,7 @@ COM/ShapesClientCPP/x64/*
 # Precompiled Headers
 *.gch
 *.pch
+*.aps
 
 # Compiled Dynamic libraries
 *.so
